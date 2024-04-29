@@ -39,5 +39,5 @@ $conn->close();
     Telepon: <input type="text" name="telepon" value="<?php echo $row['Telepon']; ?>"><br>
     <input type="hidden" name="id_gerai" value="<?php echo $row['ID_Gerai']; ?>">
     <input type="submit" value="Submit">
-    <a href="admin.php">Back</a>
+    <a href="../admin.php">Back</a>
 </form>

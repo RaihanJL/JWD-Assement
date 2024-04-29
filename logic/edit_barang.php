@@ -41,5 +41,5 @@ $conn->close();
     <p>Supplier:</p> <input type="text" name="supplier" value="<?php echo $row['Supplier']; ?>"><br>
     <input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
     <input type="submit" value="Submit">
-    <a href="admin.php">Back</a>
+    <a href="../admin.php">Back</a>
 </form>
