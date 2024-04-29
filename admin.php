@@ -15,19 +15,63 @@
             }
         }
     </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .all-content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .admin-head {
+            margin: 0;
+            color: #333;
+        }
+        .button-tambah {
+            padding: 10px 20px;
+            background-color: #eeece1;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            margin-bottom: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
 
+    </style>
 </head>
 <body>
     <div class="all-content">
-        <div style="display:flex; justify-content: space-between; align-items: center">
-            <h1 class="admin-head">Dashboard</h1>
-            <p style="font-weight:bold">Admin</p>
+        <div style="background-color:#eeece1; padding:20px">
+            <h1 style="text-align:center;">Admin Dashboard</h1>
         </div>
         <div>
             <div>
                 <h2> Tabel Barang</h2>
                 <button style="padding: 10px 20px; background-color:#eeece1; border:none; border-radius: 5px; color:black; margin-bottom:20px; font-weight:bold; cursor:pointer" class="button-tambah" onclick="toggleForm('barangForm')">Add Barang</button>
-                <form id="barangForm" method="post" action="add_barang.php" style="display:none;">
+                <form id="barangForm" method="post" action="./logic/add_barang.php" style="display:none;">
                     <P>ID:</p><input type="text" name="id"><br>
                     <p>Kategori:</p> <input type="text" name="kategori"><br>
                     <p>Nama Barang:</p> <input type="text" name="nama_barang"><br>
@@ -74,7 +118,7 @@
                         echo "<td>" . $row["Harga"] . "</td>";
                         echo "<td>" . $row["Stok"] . "</td>";
                         echo "<td>" . $row["Supplier"] . "</td>";
-                        echo "<td><a href='edit_barang.php?id=" . $row["ID"] . "'>Edit</a> | <a href='delete_barang.php?id=" . $row["ID"] . "'>Delete</a></td>";
+                        echo "<td><a href='./logic/edit_barang.php?id=" . $row["ID"] . "'>Edit</a> | <a href='./logic/delete_barang.php?id=" . $row["ID"] . "'>Delete</a></td>";
                         echo "</tr>";
                     }
                 }
@@ -85,7 +129,7 @@
             <div>
                 <h2> Tabel Gerai</h2>
                 <button style="padding: 10px 20px; background-color:#eeece1; border:none; border-radius: 5px; color:black; margin-bottom:20px; font-weight:bold; cursor:pointer" class="button-tambah" onclick="toggleForm('geraiForm')">Add Gerai</button>
-                <form id="geraiForm" method="post" action="add_gerai.php" style="display:none;">
+                <form id="geraiForm" method="post" action="./logic/add_gerai.php" style="display:none;">
                     <P>ID_Gerai:</p><input type="text" name="id"><br>
                     <p>Nama:</p> <input type="text" name="nama"><br>
                     <p>Alamat:</p> <input type="text" name="alamat"><br>
@@ -124,7 +168,7 @@
                         echo "<td>" . $row["Alamat"] . "</td>";
                         echo "<td>" . $row["Kota"] . "</td>";
                         echo "<td>" . $row["Telepon"] . "</td>";
-                        echo "<td><a href='edit_gerai.php?id=" . $row["ID_Gerai"] . "'>Edit</a> | <a href='delete_gerai.php?id=" . $row["ID_Gerai"] . "'>Delete</a></td>";
+                        echo "<td><a href='./logic/edit_gerai.php?id=" . $row["ID_Gerai"] . "'>Edit</a> | <a href='./logic/delete_gerai.php?id=" . $row["ID_Gerai"] . "'>Delete</a></td>";
                         echo "</tr>";
                     }
                 }
@@ -135,7 +179,7 @@
             <div>
                 <h2> Tabel Supplier</h2>
                 <button style="padding: 10px 20px; background-color:#eeece1; border:none; border-radius: 5px; color:black; margin-bottom:20px; font-weight:bold; cursor:pointer" class="button-tambah" onclick="toggleForm('supplierForm')">Add Supplier</button>
-                <form id="supplierForm" method="post" action="add_supplier.php" style="display:none;">
+                <form id="supplierForm" method="post" action="./logic/add_supplier.php" style="display:none;">
                     <P>ID_Supplier:</p><input type="text" name="id"><br>
                     <p>Nama:</p> <input type="text" name="nama"><br>
                     <p>Alamat:</p> <input type="text" name="alamat"><br>
@@ -174,7 +218,7 @@
                         echo "<td>" . $row["Alamat"] . "</td>";
                         echo "<td>" . $row["Kota"] . "</td>";
                         echo "<td>" . $row["Telepon"] . "</td>";
-                        echo "<td><a href='edit_supplier.php?id=" . $row["ID_Supplier"] . "'>Edit</a> | <a href='delete_supplier.php?id=" . $row["ID_Supplier"] . "'>Delete</a></td>";
+                        echo "<td><a href='./logic/edit_supplier.php?id=" . $row["ID_Supplier"] . "'>Edit</a> | <a href='./logic/delete_supplier.php?id=" . $row["ID_Supplier"] . "'>Delete</a></td>";
                         echo "</tr>";
                     }
                 }
