@@ -40,6 +40,6 @@ $conn->close();
     <p>Stok:</p> <input type="text" name="stok" value="<?php echo $row['Stok']; ?>"><br>
     <p>Supplier:</p> <input type="text" name="supplier" value="<?php echo $row['Supplier']; ?>"><br>
     <input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
-    <input type="submit" value="Submit">
+    <input style="padding: 10px 20px; background-color:#eeece1; border:none; border-radius: 5px; color:black; margin-bottom:20px; font-weight:bold" type="submit" value="Submit">
     <a href="../admin.php">Back</a>
 </form>

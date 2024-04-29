@@ -33,11 +33,11 @@ $conn->close();
 ?>
 
 <form method="post">
-    Nama: <input type="text" name="nama" value="<?php echo $row['Nama']; ?>"><br>
-    Alamat: <input type="text" name="alamat" value="<?php echo $row['Alamat']; ?>"><br>
-    Kota: <input type="text" name="kota" value="<?php echo $row['Kota']; ?>"><br>
-    Telepon: <input type="text" name="telepon" value="<?php echo $row['Telepon']; ?>"><br>
+    <p>Nama:</p> <input type="text" name="nama" value="<?php echo $row['Nama']; ?>"><br>
+    <p>Alamat:</p> <input type="text" name="alamat" value="<?php echo $row['Alamat']; ?>"><br>
+    <p>Kota:</p> <input type="text" name="kota" value="<?php echo $row['Kota']; ?>"><br>
+    <p>Telepon:</p> <input type="text" name="telepon" value="<?php echo $row['Telepon']; ?>"><br>
     <input type="hidden" name="id_supplier" value="<?php echo $row['ID_Supplier']; ?>">
-    <input type="submit" value="Submit">
+    <input style="padding: 10px 20px; background-color:#eeece1; border:none; border-radius: 5px; color:black; margin-bottom:20px; font-weight:bold" type="submit" value="Submit">
     <a href="../admin.php">Back</a>
 </form>
